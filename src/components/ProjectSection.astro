@@ -1,9 +1,9 @@
 ---
 import ProjectCard from '../components/ProjectCard.astro';
 ---
-<div class="bg-slate-100 my-24 py-16" id="projects">
+<section class="bg-slate-100 py-8" id="projects">
 
-    <h2 class="text-center text-2xl font-bold heading uppercase">My Projects</h2>
+    <h2 class="text-center text-2xl font-bold uppercase text-white">My Projects</h2>
 
     <div class="container px-8 grid grid-cols-1 gap-8 my-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mx-auto xl:px-0">
         <ProjectCard />
@@ -12,10 +12,17 @@ import ProjectCard from '../components/ProjectCard.astro';
         <ProjectCard />
     </div>
 
-    <div class="flex justify-center">
-        <a href="/projects" class="inline-flex justify-center items-center gap-2 font-semibold border-b-2 border-gray-900 py-1">
+    <div class="flex justify-center text-white">
+        <a href="/projects" class="inline-flex justify-center items-center gap-2 font-semibold border-b-2 border-white py-1">
             <span>See more</span>
-            <box-icon name='right-arrow-alt'></box-icon>
+            <box-icon name='right-arrow-alt' class="fill-white"></box-icon>
         </a>
     </div>
-</div>
+</section>
+
+<style>
+    section {
+    position: relative;
+    background-image: linear-gradient(-45deg, #2563EB, #7C3AED);
+}
+</style>
