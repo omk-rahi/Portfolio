@@ -1,25 +1,31 @@
-<div class="bg-white pb-6 rounded shadow-md overflow-hidden">
+---
 
-    <div class="px-8 py-8 border-b bg-slate-100">
-        <img src="/mockups/quickbites.png" alt="Project image" class="rounded">
+const {info} = Astro.props;
+
+---
+
+<div class="bg-white pb-6 rounded-md shadow-xl overflow-hidden hover:scale-105 transition-transform ">
+
+    <div class="border-b-2 border-slate-200 overflow-hidden">
+        <img src=`/mockups/${info.image}` alt="Project image" class="rounded" height="100%">
     </div>
         
     <div class="px-8">
         <div class="mt-2">
-            <h2 class="text-xl font-bold text-slate-700">QuickBites</h2>
-            <h3 class="font-semibold text-slate-500 mb-1">A online food delivery website</h3>
-            <p class="text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto hic laboriosam earum officiis non numquam. Molestiae sit deserunt impedit optio?</p>
+            <h2 class="text-xl font-bold text-slate-700 mb-2 select-none">{info.title}</h2>
+            <p class="text-gray-500 select-none">{info.description}</p>
         </div>
         
         <div class="flex gap-4 mt-3">
-            <a href="https://quickbites-kj6z.onrender.com/" target="_blank" class="flex justify-center items-center gap-2 link transition-all duration-200 border-b-2 border-transparent hover:border-gray-900 py-1">
+            <a href={info.liveLink} target="_blank" class="flex justify-center items-center gap-2 link transition-all duration-200 border-b-2 border-transparent hover:border-gray-900 py-1">
                 <span>Live demo</span>
                 <box-icon name='up-arrow-alt' class=" rotate-45"></box-icon>
             </a>
-            <a href="https://github.com/omk-rahi/quickbites" target="_blank" class="flex justify-center items-center gap-2 link transition-all duration-200 border-b-2 border-transparent hover:border-gray-900 py-1">
+            <a href={info.githubLink} target="_blank" class="flex justify-center items-center gap-2 link transition-all duration-200 border-b-2 border-transparent hover:border-gray-900 py-1">
                 <span>Github</span>
                 <box-icon name='github' type='logo' ></box-icon>
             </a>
         </div>
     </div>
 </div>
+

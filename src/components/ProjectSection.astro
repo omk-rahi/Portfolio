@@ -1,15 +1,15 @@
 ---
 import ProjectCard from '../components/ProjectCard.astro';
+
+import projects from '../data/projects.json';
+
 ---
 <section class="bg-slate-100 py-8" id="projects">
 
     <h2 class="text-center text-2xl font-bold uppercase text-white">My Projects</h2>
 
     <div class="container px-8 grid grid-cols-1 gap-8 my-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mx-auto xl:px-0">
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
+      {projects.map(project => <ProjectCard info={project}/>)}
     </div>
 
     <div class="flex justify-center text-white">
